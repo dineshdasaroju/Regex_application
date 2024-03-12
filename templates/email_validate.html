@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: burlywood;
+            margin: 0;
+            padding: 20px;
+        }
+        h2, h3 {
+            text-align: center;
+            color: black;
+        }
+        a {
+            display: block;
+            text-align: center;
+            color: gray;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    </style>   
+</head>
+<body>
+    <h2>Email Validate</h2>
+    <h3>{{ email }}</h3>
+    {% if error %}
+        <p style="color: red;text-align: center;">Your {{ email }}. Email is not valid.</p>
+        {% endif %}
+    {% if match %}
+        <p style="color: green;text-align: center;">Your '{{ email }}'. Email is valid.</p>
+    {% endif %}
+    <a href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Your Regex Man</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: burlywood;
+            margin: 0;
+            padding: 20px;
+            color: white;
+        }
+        h2 {
+            text-align: center;
+            color: black;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            width: 300px;
+            margin-bottom: 15px;
+            color: gray;
+            background-color: white;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: green;
+            color: white;
+            border: green;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: yellowgreen;
+        }
+
+        li {
+            background-color: grey;
+            padding: 10px;
+            border: 1px gray;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Match Your Regex Here</h2>
+    <form action="/match" method="POST">
+        <input type="text" id="text" name="text" autocomplete="off" placeholder="Enter Your Text">
+        <input type="text" id="pattern" name="pattern" autocomplete="off" placeholder="Enter Your Regex Pattern">
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Is Your Email Valid ?</h2>
+    <form action="/email" method="POST">
+        <input type="text" name="email" autocomplete="off" placeholder="Enter Your Email">
+        <button type="submit">Validate</button>
+    </form>
+</body>
+</html>
